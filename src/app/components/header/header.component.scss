@@ -1,0 +1,22 @@
+.navigation{
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(221, 241, 241);
+    span{ 
+        padding: 0.5em;
+        border-radius: 0.5em;
+        background-color: rgb(136, 136, 136);
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .active-link{
+        span{
+            background-color:blue;
+            color: white;
+        }
+    }
+}

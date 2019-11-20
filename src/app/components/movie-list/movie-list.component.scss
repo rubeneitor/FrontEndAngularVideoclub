@@ -1,0 +1,37 @@
+
+.movies{
+    background-color: rgb(136, 136, 136);
+    display: grid;
+    grid-template: repeat(4,1fr) / repeat(5,1fr);
+    .movie{
+        background-color: rgb(221, 241, 241);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem;
+        padding: 0.8rem;
+        border-radius: 0.7rem;
+        
+        h2{
+            font-size: 1.2rem;
+            color: red;
+        }
+        img{
+            width: 200px;
+        }
+    }
+}
+
+// .movies {
+
+// }
+
+// .movie{
+
+// }
+
+// h2{
+
+// }
+//Es lo mismo que lo de arriba
