@@ -30,6 +30,7 @@ export class UserService {
 
   setUser(user:User):void{
     this.user=user;
+    localStorage.setItem('user',JSON.stringify(user) )
   }
 }
 

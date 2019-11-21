@@ -7,12 +7,21 @@ import { User } from 'src/app/models/user.model';
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.scss']
 })
-export class PerfilComponent {
+export class PerfilComponent implements OnInit{
+  
   user:User={
     username: '',
     password: ''
   }
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService ) { }
 
+  ngOnInit(){
+  this.user=JSON.parse(localStorage.getItem('user')) 
+  console.log(this.user)
+  }
+  
 
 }
+
+
+

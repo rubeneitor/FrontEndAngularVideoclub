@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: "movie/:id", component:MovieDetailComponent},
   {path: "user/login", component:LoginComponent},
   {path: "user/perfil", component:PerfilComponent},
-  {path: "user/perfil/:user", component:UserDetailComponent}
+  {path: "user/perfil/:username", component:UserDetailComponent}
 
 ];
 
