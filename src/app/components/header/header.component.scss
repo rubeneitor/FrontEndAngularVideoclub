@@ -1,8 +1,9 @@
 .navigation{
-    padding: 0.5em;
+    padding: 1em;
     display: flex;
     justify-content: space-evenly;
     background-color: rgb(221, 241, 241);
+    
     span{ 
         padding: 0.5em;
         border-radius: 0.5em;
@@ -19,4 +20,17 @@
             color: white;
         }
     }
+
+    .pelis {
+        display: none;
+    }
+}
+
+.imgNetflix{
+    background-image: url('../images/logoN.png');
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-color: red;
+
 }

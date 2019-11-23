@@ -14,6 +14,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
     MovieDetailComponent,
     LoginComponent,
     PerfilComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

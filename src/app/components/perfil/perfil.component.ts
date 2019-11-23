@@ -17,11 +17,27 @@ export class PerfilComponent implements OnInit{
 
   ngOnInit(){
   this.user=JSON.parse(localStorage.getItem('user')) 
+  
   console.log(this.user)
   }
   
 
 }
+@Component({
+  selector: 'app-header',
+  template: `
+  <div class="card">Hard Times</div>
+  <style>
+    .pelis {   
+      display: block; 
+    }
+  </style>`,
 
+})
+export class HeaderComponent {
+  
+  }
+
+ 
 
 

@@ -35,5 +35,6 @@ export class LoginComponent  {
         }, 2500);
       },
       error=>this.res=error.error)
+      
   }
 }

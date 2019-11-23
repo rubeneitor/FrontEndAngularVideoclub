@@ -7,17 +7,20 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 const routes: Routes = [
+  {path: "user/login", component:LoginComponent},
   {path: "", redirectTo: "discover", pathMatch: "full"},//para que muestre en home que ponga /discover
   {path: "discover", component:MovieListComponent},
   {path: "movies/:category", component:MovieCategoriesComponent},
   {path: "register", component:RegisterComponent},//Añadimos la ruta de registro 
   {path: "movie/:id", component:MovieDetailComponent},
-  {path: "user/login", component:LoginComponent},
+  
   {path: "user/perfil", component:PerfilComponent},
-  {path: "user/perfil/:username", component:UserDetailComponent}
+  {path: "user/perfil/:username", component:UserDetailComponent},
+  {path: "user/logout", component:LogoutComponent}
 
 ];
 
