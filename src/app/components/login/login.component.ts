@@ -31,10 +31,11 @@ export class LoginComponent  {
         .setUser(res['user'])
         localStorage.setItem('token', res['token'])
         setTimeout(() => {
-          this.router.navigate(['/discover'])
+          this.router.navigate(['/pelicula'])
         }, 2500);
       },
       error=>this.res=error.error)
+      this.userService.isNone = false;
       
   }
 }

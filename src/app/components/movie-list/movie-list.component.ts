@@ -9,15 +9,16 @@ import { Movie } from 'src/app/models/movie.model';
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent implements OnInit {
-  peliculas:Array<Movie> = [];
+  peliculas:Array<Movie>=[];
   constructor(private movieService:MovieService) { }
 
   ngOnInit() {
     this.movieService.getDiscoverMovie()
     .subscribe(
-      res=>this.peliculas=res['results'],
+      res=>
+        this.peliculas= Object.values(res),  
       error=>console.error(error)
-    )
+      )
     
   }
 

@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
+  isNone = true;
   apiKey = '210d6a5dd3f16419ce349c9f1b200d6d';
   apiUrl = 'https://api.themoviedb.org/3/';
   private user:User;

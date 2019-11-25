@@ -15,6 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { HighligthDirective } from './highligth.directive';
+import { PorGeneroComponent } from './components/por-genero/por-genero.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { LogoutComponent } from './components/logout/logout.component';
     LoginComponent,
     PerfilComponent,
     UserDetailComponent,
-    LogoutComponent
+    LogoutComponent,
+    HighligthDirective,
+    PorGeneroComponent
   ],
   imports: [
     BrowserModule,

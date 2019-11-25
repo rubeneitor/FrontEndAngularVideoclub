@@ -1,37 +1,37 @@
 <header>
-    
-            <div class="imgNetflix">
-            
-        
-                </div>
-        <div>
-            <nav class="navigation">
-                <a routerLink="/discover" routerLinkActive="active-link">
-                    <span>Home</span>
-                </a>
-                <a routerLink="/movies/popular" routerLinkActive="active-link">
-                    <span class="pelis">Popular Movies</span>
-                </a>
-                <a routerLink="movies/top_rated" routerLinkActive="active-link">
-                    <span class="pelis">Top rated Movies</span>
-                </a>
-                <div class="isNotLoggedIn" *ngIf="!userService.getUser()">
-                    <a routerLink="/register" routerLinkActive="active-link">
-                        <span>Register</span>
-                    </a>
-                    <a routerLink="/user/login" routerLinkActive="active-link">
-                        <span>Log in</span>
-                    </a>
-                </div>
-                <div class="isLoggedIn" *ngIf="userService.getUser()">
-                    <a routerLink="/user/perfil" routerLinkActive="active-link">
-                        <span>Perfil</span>
-                    </a>
-                    <a routerLink="/user/logout" routerLinkActive="active-link">
-                        <span>Log out</span>
-                    </a>
-                </div>
 
-            </nav>
-        </div>
+    <div class="imgNetflix">
+
+
+    </div>
+    <div>
+        <nav class="navigation">
+            <a routerLink="/pelicula" routerLinkActive="active-link">
+                <span>Home</span>
+            </a>
+            <a routerLink="/movies/popular" routerLinkActive="active-link">
+                <span class="pelis" [style.display]="userService.isNone ? 'none':'block'">Peliculas Populares</span>
+            </a>
+            <a routerLink="movies/top_rated" routerLinkActive="active-link">
+                <span class="pelis" [style.display]="userService.isNone ? 'none':'block'">Peliculas por Genero</span>
+            </a>
+            <div class="isNotLoggedIn" *ngIf="!userService.getUser()">
+                <a routerLink="/register" routerLinkActive="active-link">
+                    <span>Register</span>
+                </a>
+                <a routerLink="/user/login" routerLinkActive="active-link">
+                    <span>Log in</span>
+                </a>
+            </div>
+            <div class="isLoggedIn" *ngIf="userService.getUser()">
+                <a routerLink="/user/perfil" routerLinkActive="active-link">
+                    <span>Perfil</span>
+                </a>
+                <a routerLink="/user/logout" routerLinkActive="active-link">
+                    <span>Log out</span>
+                </a>
+            </div>
+
+        </nav>
+    </div>
 </header>

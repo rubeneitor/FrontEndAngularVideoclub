@@ -19,7 +19,7 @@ export class LogoutComponent implements OnInit {
     this.userService.setUser(null);
     localStorage.removeItem('user');
     localStorage.removeItem('token');
-    this.router.navigate(['/discover'])    
+    this.router.navigate(['/pelicula'])    
   }
 
 }

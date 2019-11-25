@@ -8,12 +8,14 @@ import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { PorGeneroComponent } from './components/por-genero/por-genero.component';
 
 
 const routes: Routes = [
   {path: "user/login", component:LoginComponent},
-  {path: "", redirectTo: "discover", pathMatch: "full"},//para que muestre en home que ponga /discover
-  {path: "discover", component:MovieListComponent},
+  {path: "", redirectTo: "pelicula", pathMatch: "full"},//para que muestre en home que ponga /discover
+  {path: "peliculas", component:MovieListComponent},
+  {path: "peliculasGeneros/name/:name", component:PorGeneroComponent},
   {path: "movies/:category", component:MovieCategoriesComponent},
   {path: "register", component:RegisterComponent},//Añadimos la ruta de registro 
   {path: "movie/:id", component:MovieDetailComponent},
