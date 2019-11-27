@@ -17,6 +17,8 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 import { LogoutComponent } from './components/logout/logout.component';
 import { HighligthDirective } from './highligth.directive';
 import { PorGeneroComponent } from './components/por-genero/por-genero.component';
+import { MovieListHomeComponentComponent } from './components/movie-list-home-component/movie-list-home-component.component';
+import { BusquedaFiltroComponent } from './components/busqueda-filtro/busqueda-filtro.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { PorGeneroComponent } from './components/por-genero/por-genero.component
     UserDetailComponent,
     LogoutComponent,
     HighligthDirective,
-    PorGeneroComponent
+    PorGeneroComponent,
+    MovieListHomeComponentComponent,
+    BusquedaFiltroComponent
   ],
   imports: [
     BrowserModule,

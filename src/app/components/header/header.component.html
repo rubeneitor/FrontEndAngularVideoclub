@@ -6,14 +6,11 @@
     </div>
     <div>
         <nav class="navigation">
-            <a routerLink="/pelicula" routerLinkActive="active-link">
-                <span><img class="imagen" src="../images/logoHome.jpg" alt=""></span>
+            <a routerLink="/peliculasMovie" routerLinkActive="active-link">
+               <div class="imagen"></div>
             </a>
-            <a routerLink="/movies/popular" routerLinkActive="active-link">
-                <span class="pelis" [style.display]="userService.isNone ? 'none':'block'">Peliculas Populares</span>
-            </a>
-            <a routerLink="movies/top_rated" routerLinkActive="active-link">
-                <span class="pelis" [style.display]="userService.isNone ? 'none':'block'">Peliculas por Genero</span>
+            <a routerLink="/peliculasFiltro" routerLinkActive="active-link">
+                <span>Filtrar Peliculas</span>
             </a>
             <div class="isNotLoggedIn" *ngIf="!userService.getUser()">
                 <a routerLink="/register" routerLinkActive="active-link">

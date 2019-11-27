@@ -9,14 +9,20 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { PorGeneroComponent } from './components/por-genero/por-genero.component';
+import { MovieListHomeComponentComponent } from './components/movie-list-home-component/movie-list-home-component.component';
+import { BusquedaFiltroComponent } from './components/busqueda-filtro/busqueda-filtro.component';
+
 
 
 const routes: Routes = [
   {path: "user/login", component:LoginComponent},
-  {path: "", redirectTo: "pelicula", pathMatch: "full"},//para que muestre en home que ponga /discover
-  {path: "pelicula", component:MovieListComponent},
+  {path: "", redirectTo: "peliculas", pathMatch: "full"},//para que muestre en home que ponga /discover
+  {path: "peliculasMovie", component:MovieListComponent},
+  {path: "peliculasFiltro", component:BusquedaFiltroComponent},
+  // {path: "pelicula", component:BusquedaFiltroComponent},
+  // {path: "peliculas", component:MovieListHomeComponentComponent},
   // {path: "peliculasGeneros/name/:name", component:PorGeneroComponent},
-  {path: "movies/:category", component:MovieCategoriesComponent},
+  // {path: "movies/:category", component:MovieCategoriesComponent},
   {path: "register", component:RegisterComponent},//Añadimos la ruta de registro 
   {path: "pelicula/:id", component:MovieDetailComponent},
   
