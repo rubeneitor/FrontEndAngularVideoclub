@@ -9,19 +9,11 @@ import { Subscriber } from 'rxjs';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent{
-  user:User={
-    username: '',
-    password: ''
-  }
-  constructor(private userService: UserService) { }
-
-ngOnInit(){
   
-}
-
-  registrar(){
-    this.userService.register(this.user)
-    .subscribe(res=>console.log(res))
+  constructor(private userService: UserService) { }
+  registrar(form){
+    // this.userService.register(this.user)
+    // .subscribe(res=>console.log(res))
   }
 
 }

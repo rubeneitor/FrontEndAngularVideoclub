@@ -10,6 +10,9 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class MovieListComponent implements OnInit {
   peliculas:Array<Movie>=[];
+  genero: '';
+  titulo = '';
+  generoTitulo = '';
   constructor(private movieService:MovieService) { }
 
   ngOnInit() {
@@ -21,6 +24,29 @@ export class MovieListComponent implements OnInit {
       )
     
   }
+
+  buscarGenero(){
+    this.movieService.getPeliculasGenero(this.genero)
+    
+    .subscribe(res=> 
+      
+      this.peliculas = Object.values(res),
+      error => console.log(error)
+      )
+      this.titulo = '';
+      // this.movieService.isNonen = true;
+      
+  }
+
+  buscarTitulo(){
+    this.movieService.getPeliculaTitulo(this.titulo)
+    .subscribe(res=> this.peliculas = Object.values(res),
+    error => console.log(error)
+    )
+    this.genero = '';
+
+  }
+  
 
 }
 

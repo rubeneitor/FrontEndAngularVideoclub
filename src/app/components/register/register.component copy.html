@@ -1,7 +1,8 @@
 <form (submit)="registrar()" #form="ngForm">
     
     <mat-form-field class="example-full-width">
-        <input matInput required placeholder="Username" 
+        <input matInput 
+        required placeholder="Username*" 
         #username [(ngModel)]="user.username" 
         name="Username">
     </mat-form-field>

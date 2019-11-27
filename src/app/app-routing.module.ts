@@ -14,11 +14,11 @@ import { PorGeneroComponent } from './components/por-genero/por-genero.component
 const routes: Routes = [
   {path: "user/login", component:LoginComponent},
   {path: "", redirectTo: "pelicula", pathMatch: "full"},//para que muestre en home que ponga /discover
-  {path: "peliculas", component:MovieListComponent},
-  {path: "peliculasGeneros/name/:name", component:PorGeneroComponent},
+  {path: "pelicula", component:MovieListComponent},
+  // {path: "peliculasGeneros/name/:name", component:PorGeneroComponent},
   {path: "movies/:category", component:MovieCategoriesComponent},
   {path: "register", component:RegisterComponent},//Añadimos la ruta de registro 
-  {path: "movie/:id", component:MovieDetailComponent},
+  {path: "pelicula/:id", component:MovieDetailComponent},
   
   {path: "user/perfil", component:PerfilComponent},
   {path: "user/perfil/:username", component:UserDetailComponent},

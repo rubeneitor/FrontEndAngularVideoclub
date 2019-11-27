@@ -28,16 +28,6 @@ export class PorGeneroComponent implements OnInit {
     })
 
   }
-
-  buscar(){
-    this.movieService.getPeliculasGenero(this.genero)
-    
-    .subscribe(res=> 
-      
-      this.peliculas = Object.values(res),
-      error => console.log(error)
-      )
-      
-  }
+  
 
 }

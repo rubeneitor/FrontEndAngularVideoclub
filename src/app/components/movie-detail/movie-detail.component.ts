@@ -10,19 +10,28 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class MovieDetailComponent implements OnInit {
   movie: object;
+  peliculas: Array<Movie> = [];
   constructor(
-    private movieService: MovieService, 
+    private movieService: MovieService,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params=>{
+    this.route.paramMap.subscribe(params => {
       const id = params.get('id')
       this.movieService.getMovieById(id)
-      .subscribe(movie=>{
-        this.movie = movie;
-      })
+        .subscribe(movie => {
+          this.movie = movie;
+        })
     })
+
+
+    this.movieService.getPeliculasGenero("Acción")
+      .subscribe(
+        res =>
+          this.peliculas = Object.values(res),
+        error => console.error(error)
+      )
   }
 
 }
