@@ -7,25 +7,25 @@
     <div>
         <nav class="navigation">
             <a routerLink="/peliculasTodas" routerLinkActive="active-link">
-               <div class="imagen"></div>
+               <div class="imagenHome"></div>
             </a>
             <a routerLink="/peliculasFiltro" routerLinkActive="active-link">
-                <span>Filtrar Peliculas</span>
+                <div title= 'Filtrar Peliculas' class="imagenFiltrarPeliculas"></div>
             </a>
             <div class="isNotLoggedIn" *ngIf="!userService.getUser()">
                 <a routerLink="/register" routerLinkActive="active-link">
-                    <span>Register</span>
+                    <div title= 'Registrarse' class="imagenSubscribe"></div>
                 </a>
                 <a routerLink="/user/login" routerLinkActive="active-link">
-                    <span>Log in</span>
+                    <div title= 'Iniciar Sesion' class="imagenLogIn"></div>
                 </a>
             </div>
             <div class="isLoggedIn" *ngIf="userService.getUser()">
                 <a routerLink="/user/perfil" routerLinkActive="active-link">
-                    <span>Perfil</span>
+                   <div title= 'Ver Perfil' class="imagenPerfil"></div>
                 </a>
                 <a routerLink="/user/logout" routerLinkActive="active-link">
-                    <span>Log out</span>
+                    <div title='Cerrar Sesion' class="imagenLogout"></div>
                 </a>
             </div>
 

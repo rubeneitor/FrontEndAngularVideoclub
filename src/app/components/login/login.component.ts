@@ -15,6 +15,7 @@ export class LoginComponent  {
     password: '',
     nombre: '',
     email: '',
+    direccion: '',
     telefono: null
   }
   res:object;
