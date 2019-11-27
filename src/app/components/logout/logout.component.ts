@@ -11,7 +11,11 @@ import { Router } from '@angular/router';
 export class LogoutComponent implements OnInit {
   user:User={
     username: '',
-    password: ''
+    password: '',
+    nombre: '',
+    email: '',
+    direccion: '',
+    telefono: null
   }
   constructor(private userService: UserService,  private router:Router) { }
 
@@ -19,7 +23,7 @@ export class LogoutComponent implements OnInit {
     this.userService.setUser(null);
     localStorage.removeItem('user');
     localStorage.removeItem('token');
-    this.router.navigate(['/pelicula'])    
+    this.router.navigate(['/peliculasTodas'])    
   }
 
 }

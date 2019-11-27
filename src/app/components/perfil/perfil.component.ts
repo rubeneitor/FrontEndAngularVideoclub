@@ -11,7 +11,11 @@ export class PerfilComponent implements OnInit{
   
   user:User={
     username: '',
-    password: ''
+    password: '',
+    nombre: '',
+    email: '',
+    direccion: '',
+    telefono: null
   }
   constructor(private userService: UserService ) { }
 
@@ -23,21 +27,3 @@ export class PerfilComponent implements OnInit{
   
 
 }
-@Component({
-  selector: 'app-header',
-  template: `
-  <div class="card">Hard Times</div>
-  <style>
-    .pelis {   
-      display: block; 
-    }
-  </style>`,
-
-})
-export class HeaderComponent {
-  
-  }
-
- 
-
-

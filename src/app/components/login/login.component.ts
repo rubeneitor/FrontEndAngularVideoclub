@@ -12,7 +12,10 @@ import { Router } from '@angular/router';
 export class LoginComponent  {
   user:User={
     username: '',
-    password: ''
+    password: '',
+    nombre: '',
+    email: '',
+    telefono: null
   }
   res:object;
   constructor(private userService:UserService,
@@ -31,7 +34,7 @@ export class LoginComponent  {
         .setUser(res['user'])
         localStorage.setItem('token', res['token'])
         setTimeout(() => {
-          this.router.navigate(['/pelicula'])
+          this.router.navigate(['peliculasTodas'])
         }, 2500);
       },
       error=>this.res=error.error)

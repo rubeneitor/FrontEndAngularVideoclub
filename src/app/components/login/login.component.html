@@ -1,26 +1,24 @@
 <form (submit)="loguear()" #form="ngForm">
-    
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Username" 
-            #username [(ngModel)]="user.username" 
-            name="Username">
-        </mat-form-field>
-        
-        <div></div>
-        
-        <mat-form-field class="example-full-width">
-            <input matInput type="password" placeholder="Password" 
-            #password [(ngModel)]="user.password" 
-            name="Password">
-        </mat-form-field> 
-        
-        <div></div>
-        <!-- <a routerLink="/user/{{user.username}}"> -->
-            <button mat-raised-button>Entrar</button>
-            <span appHighligth></span>
-        <!-- </a> -->
-    </form>
-    
-    {{user | json}}
-    <br>
-    {{res?.message}}
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Username" #username [(ngModel)]="user.username" name="Username">
+    </mat-form-field>
+
+    <div></div>
+
+    <mat-form-field class="example-full-width">
+        <input matInput type="password" placeholder="Password" #password [(ngModel)]="user.password" name="Password">
+    </mat-form-field>
+
+    <div></div>
+
+    <div></div>
+    <!-- <a routerLink="/user/{{user.username}}"> -->
+    <button mat-raised-button>Entrar</button>
+    <span appHighligth></span>
+    <!-- </a> -->
+</form>
+
+{{user | json}}
+<br>
+{{res?.message}}

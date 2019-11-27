@@ -11,7 +11,11 @@ import { Subscriber } from 'rxjs';
 export class RegisterComponent{
   user:User={
     username: '',
-    password: ''
+    password: '',
+    nombre: '',
+    email: '',
+    direccion: '',
+    telefono: null
   }
   constructor(private userService: UserService) { }
 

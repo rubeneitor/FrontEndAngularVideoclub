@@ -18,6 +18,14 @@
     .isNotLoggedIn{
         display: flex;
         justify-content: space-between;
+        width: 160px;
+        align-self: center;
+    }
+
+    .isLoggedIn{
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
         align-self: center;
     }
 

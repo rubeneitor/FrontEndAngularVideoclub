@@ -17,7 +17,7 @@ import { BusquedaFiltroComponent } from './components/busqueda-filtro/busqueda-f
 const routes: Routes = [
   {path: "user/login", component:LoginComponent},
   {path: "", redirectTo: "peliculas", pathMatch: "full"},//para que muestre en home que ponga /discover
-  {path: "peliculasMovie", component:MovieListComponent},
+  {path: "peliculasTodas", component:MovieListComponent},
   {path: "peliculasFiltro", component:BusquedaFiltroComponent},
   // {path: "pelicula", component:BusquedaFiltroComponent},
   // {path: "peliculas", component:MovieListHomeComponentComponent},
