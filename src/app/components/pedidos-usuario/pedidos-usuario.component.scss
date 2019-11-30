@@ -1,0 +1,20 @@
+.tablaPedidos {
+    width: 100%;
+
+    td, tr{
+        width: 25%;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th{
+        width: 25%;
+        padding: 10px;
+        text-align: left;
+        color: #f5bd85;
+    }
+}
+
+.pedidos {
+    padding-left: 1em;
+}

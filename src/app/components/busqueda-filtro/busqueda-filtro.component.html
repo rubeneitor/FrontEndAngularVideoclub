@@ -1,10 +1,9 @@
-
-    <div class="contenedorFiltro">
+<div class="contenedorFiltro">
     <mat-form-field class="example-full-width">
         <input matInput [(ngModel)]="genero" type="text" placeholder="Introduce un genero">
 
     </mat-form-field>
-    <button (click)="buscarGenero()">Buscar</button>
+    <button (click)="buscarGenero()" mat-raised-button>Buscar Peliculas por Genero</button>
 
 </div>
 
@@ -13,10 +12,10 @@
         <input matInput [(ngModel)]="titulo" type="text" placeholder="Introduce un titulo">
 
     </mat-form-field>
-    <button (click)="buscarTitulo()">Buscar</button>
+    <button (click)="buscarTitulo()" mat-raised-button>Buscar Peliculas por Titulo</button>
 </div>
 
-<div class="movies" >
+<div class="moviesFiltro">
     <div class="movie" *ngFor="let pelicula of peliculas">
         <a routerLink="/pelicula/{{pelicula.id}}">
             <h2>{{pelicula.title}}</h2>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import { MovieService } from 'src/app/services/movie.service';
+import { PedidoService } from 'src/app/services/pedido.service';
 
 
 @Component({
@@ -11,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent  {
   user:User={
+    id: null,
     username: '',
     password: '',
     nombre: '',
@@ -20,6 +23,8 @@ export class LoginComponent  {
   }
   res:object;
   constructor(private userService:UserService,
+    private movieService: MovieService,
+    private pedidoService: PedidoService,
     private router:Router) { }
 
   // loguear(){
@@ -39,7 +44,11 @@ export class LoginComponent  {
         }, 2500);
       },
       error=>this.res=error.error)
-      this.userService.isNone = false;
+      // this.userService.isNone = false;
+      this.movieService.isNoneFiltro = false;
+      this.pedidoService.formPedidoNone = false;
+      this.pedidoService.btnAlquilarNone = false;
+
       
   }
 }

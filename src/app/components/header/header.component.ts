@@ -10,7 +10,7 @@ import { MovieService } from 'src/app/services/movie.service';
 export class HeaderComponent implements OnInit {
 
   constructor(private userService:UserService,
-    private mmovieService: MovieService) { }
+    private movieService: MovieService) { }
 
   ngOnInit() {
   }

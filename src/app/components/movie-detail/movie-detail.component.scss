@@ -5,5 +5,17 @@
 .propiedadesPelicula{
     color: red;
     width: 170px;
+    text-shadow: 1px 1px black;
 }
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    width: 430px;
+}
+
+.contenedorAlquiler {
+    padding-left: 1em;
+}
+
 

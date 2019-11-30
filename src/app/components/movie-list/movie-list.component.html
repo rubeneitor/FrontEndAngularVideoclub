@@ -1,6 +1,3 @@
-
-
-
 <div class="movies" [style.display]="movieService.homeIsNone ? 'none':'grid'">
     <div class="movie" *ngFor="let pelicula of peliculas">
         <a routerLink="/pelicula/{{pelicula.id}}">

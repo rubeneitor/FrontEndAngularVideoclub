@@ -10,6 +10,7 @@ import { Subscriber } from 'rxjs';
 })
 export class RegisterComponent{
   user:User={
+    id: null,
     username: '',
     password: '',
     nombre: '',

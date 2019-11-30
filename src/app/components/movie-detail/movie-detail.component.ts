@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { Movie } from 'src/app/models/movie.model';
+import { PedidoService } from 'src/app/services/pedido.service';
+import { Pedido } from 'src/app/models/pedido.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-movie-detail',
@@ -9,11 +12,22 @@ import { Movie } from 'src/app/models/movie.model';
   styleUrls: ['./movie-detail.component.scss']
 })
 export class MovieDetailComponent implements OnInit {
+  pedido: Pedido = {
+    numPedido: null,
+    idUsuario: null,
+    direccion: '',
+    fechaAlquiler: new Date,
+    fechaEntrega: null
+  }
+
   movie: object;
   peliculas: Array<Movie> = [];
   constructor(
     private movieService: MovieService,
-    private route: ActivatedRoute
+    private pedidoService: PedidoService,
+    private route: ActivatedRoute,
+    private location: Location,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -24,14 +38,11 @@ export class MovieDetailComponent implements OnInit {
           this.movie = movie;
         })
     })
-
-
-    this.movieService.getPeliculasGenero("Acción")
-      .subscribe(
-        res =>
-          this.peliculas = Object.values(res),
-        error => console.error(error)
-      )
   }
+
+    alquilar(){
+    this.router.navigateByUrl('/pedido');
+  }
+  // .subscribe(res => res = this.location.go(path:"pedidos"));
 
 }

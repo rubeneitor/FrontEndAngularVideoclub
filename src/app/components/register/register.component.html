@@ -1,4 +1,4 @@
-<form (submit)="registrar()" #form="ngForm">
+<form (submit)="registrar()" #form="ngForm" class="formRegistrar">
 
     <mat-form-field class="example-full-width">
         <input matInput required placeholder="Username" #username [(ngModel)]="user.username" name="Username">
@@ -45,5 +45,3 @@
     <button mat-raised-button>Register</button>
 
 </form>
-
-{{user | json}}

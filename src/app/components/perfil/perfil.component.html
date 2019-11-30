@@ -1,24 +1,28 @@
-<h2>Llega aqui</h2>
+<div class="datosUsuario">
+  <h1 style="color: orange;">Perfil de {{user.username}}</h1>
 
-<div class="contenedor">
-  <p>Username:</p>
-  <p>{{user.username}}</p>
-</div>
-<div class="contenedor">
-  <p>Nombre:</p>
-  <p>{{user.nombre}}</p>
-</div>
-<div class="contenedor">
-  <p>Email:</p>
-  <p>{{user.email}}</p>
-</div>
-<div class="contenedor">
-  <p>Dirección:</p>
-  <p>{{user.direccion}}</p>
-</div>
-<div class="contenedor">
-  <p>Telefono:</p>
-  <p>{{user.telefono}}</p>
+  <div class="contenedor">
+    <p>Username:</p>
+    <p>{{user.username}}</p>
+  </div>
+  <div class="contenedor">
+    <p>Nombre:</p>
+    <p>{{user.nombre}}</p>
+  </div>
+  <div class="contenedor">
+    <p>Email:</p>
+    <p>{{user.email}}</p>
+  </div>
+  <div class="contenedor">
+    <p>Dirección:</p>
+    <p>{{user.direccion}}</p>
+  </div>
+  <div class="contenedor">
+    <p>Telefono:</p>
+    <p>{{user.telefono}}</p>
+  </div>
+
+  <div><button (click)=pedidos() mat-raised-button>Ver Pedidos</button></div>
 </div>
 
 <!-- <a routerLink="/user/perfil/{{user.password}}"></a>

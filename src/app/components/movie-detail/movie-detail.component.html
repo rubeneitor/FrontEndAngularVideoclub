@@ -1,26 +1,38 @@
-<div class="contenedor">
-    <p class="propiedadesPelicula">Id de la pelicula: </p>
-    <p> {{movie.id}}</p>
-</div>
-<br>
-<div class="contenedor">
-    <p class="propiedadesPelicula">Titulo de la pelicula:</p>
-    <p>{{movie.title}}</p>
-</div>
-<br>
-<div class="contenedor">
-    <p class="propiedadesPelicula">Resumen de la pelicula: </p>
-    <p>{{movie.overview}}</p>
-</div>
-<br>
-<div class="contenedor">
-    <p class="propiedadesPelicula">Fecha de estreno:</p>
-    <p>{{movie.release_date}}</p>
-</div>
+<div *ngIf="movie" class="contenedorAlquiler">
+    <h1 class='titulo'><span style="color: orange;">Detalles de la pelicula:</span> <span>{{movie.title}}</span></h1>
 
-<h1>Peliculas Relacionadas</h1>
-<div class="movie" *ngFor="let pelicula of peliculas">
-    <h2>{{pelicula.title}}</h2>
-    <img src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" alt="poster">
+    <div class="contenedor">
+        <p class="propiedadesPelicula">Id de la pelicula: </p>
+        <p> {{movie.id}}</p>
+    </div>
+    <br>
+    <div class="contenedor">
+        <p class="propiedadesPelicula">Titulo de la pelicula:</p>
+        <p>{{movie.title}}</p>
+    </div>
+    <br>
+    <div class="contenedor">
+        <p class="propiedadesPelicula">Resumen de la pelicula: </p>
+        <p>{{movie.overview}}</p>
+    </div>
+    <br>
+    <div class="contenedor">
+        <p class="propiedadesPelicula">Fecha de estreno:</p>
+        <p>{{movie.release_date}}</p>
+    </div>
 
+
+    <!-- <h1>Peliculas Relacionadas</h1>
+    <div class="movie" *ngFor="let pelicula of peliculas">
+        <h2>{{pelicula.title}}</h2>
+        <img src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" alt="poster">
+
+    </div> -->
+
+    <div [style.display]="pedidoService.btnAlquilarNone ? 'none':'block'">
+        <button (click)=alquilar() mat-raised-button>Alquilar</button>
+    </div>
 </div>
+<!-- <div [style.diplay] = "formPedidoNone ? 'none' : 'block'">
+    <app-alguiler-pelicula></app-alguiler-pelicula>
+</div> -->

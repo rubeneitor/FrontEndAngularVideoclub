@@ -11,9 +11,10 @@ export class MovieService {
   apiKey = '210d6a5dd3f16419ce349c9f1b200d6d';
   apiUrl = 'https://api.themoviedb.org/3/'
 
-  isNonen = false;
-  homeIsNone = false;
-  filterIsNone=false;
+  // isNonen = false;
+  isNoneFiltro = true;
+  // homeIsNone = false;
+  // filterIsNone=false;
   genero='';
   titulo='';
   peliculas:Array<Movie>=[];

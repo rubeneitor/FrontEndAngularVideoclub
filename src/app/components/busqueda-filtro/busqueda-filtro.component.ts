@@ -25,7 +25,7 @@ export class BusquedaFiltroComponent implements OnInit {
       )
       this.titulo = '';
       // this.movieService.isNonen = true;ç
-      this.movieService.homeIsNone
+      // this.movieService.homeIsNone
 
   }
   buscarTitulo(){

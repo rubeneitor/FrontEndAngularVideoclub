@@ -1,28 +1,32 @@
 <header>
-
-    <div class="imgNetflix">
-
-
+    <ng-marquee duration="20">
+        <mark style="background-color: #DDF1F1; color: red">Bienvenido a mi aplicacion de netflix old. Espero que pases
+            un buen rato! ;)</mark>
+    </ng-marquee>
+    <div class="contenedorLogo">
+        <div class="imgNetflix"></div>
+        <div class="logoAplicacion"></div>
     </div>
     <div>
         <nav class="navigation">
             <a routerLink="/peliculasTodas" routerLinkActive="active-link">
-               <div class="imagenHome"></div>
+                <div class="imagenHome"></div>
             </a>
             <a routerLink="/peliculasFiltro" routerLinkActive="active-link">
-                <div title= 'Filtrar Peliculas' class="imagenFiltrarPeliculas"></div>
+                <div [style.display]="movieService.isNoneFiltro ? 'none' : 'grid'" title='Filtrar Peliculas'
+                    class="imagenFiltrarPeliculas"></div>
             </a>
             <div class="isNotLoggedIn" *ngIf="!userService.getUser()">
                 <a routerLink="/register" routerLinkActive="active-link">
-                    <div title= 'Registrarse' class="imagenSubscribe"></div>
+                    <div title='Registrarse' class="imagenSubscribe"></div>
                 </a>
                 <a routerLink="/user/login" routerLinkActive="active-link">
-                    <div title= 'Iniciar Sesion' class="imagenLogIn"></div>
+                    <div title='Iniciar Sesion' class="imagenLogIn"></div>
                 </a>
             </div>
             <div class="isLoggedIn" *ngIf="userService.getUser()">
                 <a routerLink="/user/perfil" routerLinkActive="active-link">
-                   <div title= 'Ver Perfil' class="imagenPerfil"></div>
+                    <div title='Ver Perfil' class="imagenPerfil"></div>
                 </a>
                 <a routerLink="/user/logout" routerLinkActive="active-link">
                     <div title='Cerrar Sesion' class="imagenLogout"></div>

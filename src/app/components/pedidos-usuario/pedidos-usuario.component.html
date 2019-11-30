@@ -1,0 +1,26 @@
+<div class="pedidos">
+
+    <h1 style="color:red">{{user.username}}</h1>
+
+
+    <table class="tablaPedidos">
+        <div class="movie" *ngFor="let pedido of pedidos">
+
+            <tr>
+                <th>Num. Pedido</th>
+                <th>Direccion</th>
+                <th>Fecha Alquiler</th>
+                <th>Fecha Entrega</th>
+            </tr>
+            <tr>
+                <td>{{pedido.numPedido}}</td>
+                <td>{{pedido.direccion}}</td>
+                <td>{{pedido.fechaAlquiler}}</td>
+                <td>{{pedido.fechaEntrega}}</td>
+
+            </tr>
+
+        </div>
+    </table>
+
+</div>
