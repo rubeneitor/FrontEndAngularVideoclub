@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 import { Subscriber } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent{
-  user:User={
+export class RegisterComponent {
+  user: User = {
     id: null,
     username: '',
     password: '',
@@ -18,15 +19,21 @@ export class RegisterComponent{
     direccion: '',
     telefono: null
   }
-  constructor(private userService: UserService) { }
+  res: object;
+  constructor(private userService: UserService,
+    private router: Router) { }
 
-ngOnInit(){
-  
-}
+  ngOnInit() {
 
-  registrar(){
+  }
+
+  registrar() {
     this.userService.register(this.user)
-    .subscribe(res=>console.log(res))
+      .subscribe(res => this.res = res)
+    setTimeout(() => {
+      this.router.navigate(['peliculasTodas'])
+    }, 2500);
+
   }
 
 }

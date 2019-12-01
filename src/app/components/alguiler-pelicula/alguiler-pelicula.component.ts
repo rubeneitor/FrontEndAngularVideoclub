@@ -5,6 +5,8 @@ import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/app/models/movie.model';
+import { ActivatedRoute } from '@angular/router';
+import { getLocaleDateFormat } from '@angular/common';
 
 @Component({
   selector: 'app-alguiler-pelicula',
@@ -12,11 +14,13 @@ import { Movie } from 'src/app/models/movie.model';
   styleUrls: ['./alguiler-pelicula.component.scss']
 })
 export class AlguilerPeliculaComponent implements OnInit {
+  fecha = new Date();
   pedido: Pedido = {
     numPedido: null,
     idUsuario: null,
+    tituloPelicula: '',
     direccion: '',
-    fechaAlquiler: new Date,
+    fechaAlquiler: new Date(),
     fechaEntrega: null
   }
   user: User = {
@@ -28,36 +32,19 @@ export class AlguilerPeliculaComponent implements OnInit {
     direccion: '',
     telefono: null
   }
+  res:object;
 
-  movie: Movie = {
-    popularity: null,
-    vote_count: null,
-    video: null,
-    poster_path: '',
-    id: null,
-    adult: null,
-    backdrop_path: '',
-    original_language: '',
-    original_title: '',
-    genre_ids: null,
-    title: '',
-    vote_average: null,
-    overview: '',
-    release_date: ''
-  };
-  constructor(private pedidoService: PedidoService,
-    private userService: UserService,
-    private movieService: MovieService) { }
+  constructor(private pedidoService: PedidoService) { }
 
   ngOnInit() {
-    console.log("----LLEGO ALQUILER----");
-
     this.user = JSON.parse(localStorage.getItem('user'))
+    this.pedido.idUsuario = this.user.id
+
   }
 
   alquilerPedido() {
     this.pedidoService.hacerPedido(this.pedido)
-      .subscribe(res => console.log(res))
+      .subscribe(res => this.res = res)
   }
 
 }

@@ -27,11 +27,6 @@ export class LoginComponent  {
     private pedidoService: PedidoService,
     private router:Router) { }
 
-  // loguear(){
-  //   this.userService.login(this.user)
-  //   .subscribe(res=>console.log(res))
-  // }
-
   loguear(){
       this.userService.login(this.user)
       .subscribe(res=>{
@@ -44,7 +39,6 @@ export class LoginComponent  {
         }, 2500);
       },
       error=>this.res=error.error)
-      // this.userService.isNone = false;
       this.movieService.isNoneFiltro = false;
       this.pedidoService.formPedidoNone = false;
       this.pedidoService.btnAlquilarNone = false;

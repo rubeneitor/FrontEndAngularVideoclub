@@ -10,7 +10,6 @@ import { LoginComponent } from '../components/login/login.component';
 export class PedidoService {
   formPedidoNone = true;
   btnAlquilarNone = true;
-  private pedido: Pedido;
   constructor(private httpClient: HttpClient) { }
 
   hacerPedido(pedido: Pedido):Observable<object>{

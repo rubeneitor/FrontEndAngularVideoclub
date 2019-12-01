@@ -23,14 +23,10 @@ export class PerfilComponent implements OnInit{
   }
  
 
-  constructor(private userService: UserService,
-    private location: Location,
-    private router:Router ) { }
+  constructor(private router:Router ) { }
 
   ngOnInit(){
   this.user=JSON.parse(localStorage.getItem('user')) 
-  
-  console.log(this.user)
   }
 
   pedidos(){

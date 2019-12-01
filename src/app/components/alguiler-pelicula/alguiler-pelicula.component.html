@@ -1,22 +1,27 @@
 <form (submit)="alquilerPedido()" #form="ngForm" class="formAlquiler">
 
-    <!-- <label for="">IdUsuario</label>
-            <p>{{user.username}}</p> -->
-
     <h1 class='titulo'><span>Realizar pedido para:</span>
-        <span style="color: red">{{user.nombre}} - {{user.id}}</span>
+        <span style="color: red">{{user.username}} - {{user.id}}</span>
     </h1>
 
     <mat-form-field>
-        <input matInput name="NumPedido" #numPedido [(ngModel)]="pedido.numPedido" placeholder="Num. Pedido">
+        <input matInput required name="NumPedido" #numPedido [(ngModel)]="pedido.numPedido" placeholder="Num. Pedido">
+    </mat-form-field>
+
+
+    <div></div>
+    <mat-form-field>
+        <input matInput name="IdUsuario" #idUsuario [(ngModel)]="pedido.idUsuario" placeholder="Id Usuario"
+            value='{{pedido.idUsuario}}' disabled>
     </mat-form-field>
 
 
     <div></div>
 
+    <div></div>
+
     <mat-form-field>
-        <input matInput name="IdUsuario" #idUsuario [(ngModel)]="pedido.idUsuario" placeholder="Id Usuario"
-            value={{user.id}}>
+        <input matInput name="TituloPelicula" #idUsuario [(ngModel)]="pedido.tituloPelicula" placeholder="Pelicula">
     </mat-form-field>
 
     <div></div>
@@ -33,7 +38,7 @@
 
     <mat-form-field class="example-full-width">
         <input matInput placeholder="Fecha Alquiler" #fechaAlquiler [(ngModel)]="pedido.fechaAlquiler"
-            name="FechaAlquiler">
+            name="FechaAlquiler" disabled>
     </mat-form-field>
 
     <div></div>
@@ -41,7 +46,7 @@
     <div></div>
 
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Fecha Entrega" #password [(ngModel)]="pedido.fechaEntrega" name="FechaEntrega">
+        <input matInput placeholder="Fecha Entrega" #fechaEntega [(ngModel)]="pedido.fechaEntrega" name="FechaEntrega">
     </mat-form-field>
 
     <div></div>
@@ -49,3 +54,4 @@
     <button mat-raised-button>Alquilar</button>
 
 </form>
+{{res?.message}}

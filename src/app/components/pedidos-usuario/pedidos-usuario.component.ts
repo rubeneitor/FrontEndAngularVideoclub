@@ -21,6 +21,7 @@ export class PedidosUsuarioComponent implements OnInit {
   pedido: Pedido = {
     numPedido: null,
     idUsuario: null,
+    tituloPelicula: '',
     direccion: '',
     fechaAlquiler: null,
     fechaEntrega: null
@@ -36,11 +37,7 @@ export class PedidosUsuarioComponent implements OnInit {
     telefono: null
   }
 
-  // movie: object;
-  constructor(private pedidoService: PedidoService,
-    private userService: UserService,
-    private movieService: MovieService,
-    private route: ActivatedRoute) { }
+  constructor(private pedidoService: PedidoService) { }
 
   ngOnInit() {
 
@@ -49,7 +46,6 @@ export class PedidosUsuarioComponent implements OnInit {
       .subscribe(
         res => {
           this.pedidos = Object.values(res)
-          // console.log("RES ", res)
         
       },
         err => {

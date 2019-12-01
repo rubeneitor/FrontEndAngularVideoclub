@@ -24,7 +24,6 @@ export class MovieListComponent implements OnInit {
       error=>console.error(error)
 
       )
-      // this.movieService.filterIsNone = true;
     
   }
 

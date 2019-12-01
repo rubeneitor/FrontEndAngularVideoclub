@@ -14,29 +14,24 @@ export class BusquedaFiltroComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    
+
   }
 
-  buscarGenero(){
+  buscarGenero() {
     this.movieService.getPeliculasGenero(this.genero)
-    .subscribe(res=> 
-      this.peliculas = Object.values(res),
-      error => console.log(error)
+      .subscribe(res =>
+        this.peliculas = Object.values(res),
+        error => console.log(error)
       )
-      this.titulo = '';
-      // this.movieService.isNonen = true;ç
-      // this.movieService.homeIsNone
+    this.titulo = '';
 
   }
-  buscarTitulo(){
+  buscarTitulo() {
     this.movieService.getPeliculaTitulo(this.titulo)
-    .subscribe(res=> this.peliculas = Object.values(res),
-    error => console.log(error)
-    )
+      .subscribe(res => this.peliculas = Object.values(res),
+        error => console.log(error)
+      )
     this.genero = '';
-    // this.movieService.homeIsNone = true;
-
-
   }
 
 }

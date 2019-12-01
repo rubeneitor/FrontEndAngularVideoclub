@@ -13,10 +13,14 @@
     <div></div>
 
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Nombre" #password [(ngModel)]="user.nombre" name="Nombre">
+        <input matInput required placeholder="Id Usuario" #id [(ngModel)]="user.id" name="Id">
     </mat-form-field>
 
     <div></div>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nombre" #password [(ngModel)]="user.nombre" name="Nombre">
+    </mat-form-field>
 
     <div></div>
 
@@ -26,13 +30,9 @@
 
     <div></div>
 
-    <div></div>
-
     <mat-form-field class="example-full-width">
         <input matInput placeholder="Dirección" #password [(ngModel)]="user.direccion" name="Dirección">
     </mat-form-field>
-
-    <div></div>
 
     <div></div>
 
@@ -45,3 +45,4 @@
     <button mat-raised-button>Register</button>
 
 </form>
+{{res?.message}}

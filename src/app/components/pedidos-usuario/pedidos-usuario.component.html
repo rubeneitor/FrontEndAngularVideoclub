@@ -4,16 +4,18 @@
 
 
     <table class="tablaPedidos">
-        <div class="movie" *ngFor="let pedido of pedidos">
+        <div *ngFor="let pedido of pedidos">
 
             <tr>
                 <th>Num. Pedido</th>
+                <th>Pelicula</th>
                 <th>Direccion</th>
                 <th>Fecha Alquiler</th>
                 <th>Fecha Entrega</th>
             </tr>
             <tr>
                 <td>{{pedido.numPedido}}</td>
+                <td>{{pedido.tituloPelicula}}</td>
                 <td>{{pedido.direccion}}</td>
                 <td>{{pedido.fechaAlquiler}}</td>
                 <td>{{pedido.fechaEntrega}}</td>

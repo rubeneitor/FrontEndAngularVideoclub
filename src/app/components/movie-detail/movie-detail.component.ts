@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from 'src/app/models/movie.model';
 import { PedidoService } from 'src/app/services/pedido.service';
 import { Pedido } from 'src/app/models/pedido.model';
@@ -15,6 +15,7 @@ export class MovieDetailComponent implements OnInit {
   pedido: Pedido = {
     numPedido: null,
     idUsuario: null,
+    tituloPelicula: '',
     direccion: '',
     fechaAlquiler: new Date,
     fechaEntrega: null
@@ -27,7 +28,7 @@ export class MovieDetailComponent implements OnInit {
     private pedidoService: PedidoService,
     private route: ActivatedRoute,
     private location: Location,
-    private router:Router
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -40,9 +41,8 @@ export class MovieDetailComponent implements OnInit {
     })
   }
 
-    alquilar(){
+  alquilar() {
     this.router.navigateByUrl('/pedido');
   }
-  // .subscribe(res => res = this.location.go(path:"pedidos"));
 
 }

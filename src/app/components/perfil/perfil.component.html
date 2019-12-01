@@ -2,28 +2,25 @@
   <h1 style="color: orange;">Perfil de {{user.username}}</h1>
 
   <div class="contenedor">
-    <p>Username:</p>
+    <p class="propiedadesUsuario">Username:</p>
     <p>{{user.username}}</p>
   </div>
   <div class="contenedor">
-    <p>Nombre:</p>
+    <p class="propiedadesUsuario">Nombre:</p>
     <p>{{user.nombre}}</p>
   </div>
   <div class="contenedor">
-    <p>Email:</p>
+    <p class="propiedadesUsuario">Email:</p>
     <p>{{user.email}}</p>
   </div>
   <div class="contenedor">
-    <p>Dirección:</p>
+    <p class="propiedadesUsuario">Dirección:</p>
     <p>{{user.direccion}}</p>
   </div>
   <div class="contenedor">
-    <p>Telefono:</p>
+    <p class="propiedadesUsuario">Telefono:</p>
     <p>{{user.telefono}}</p>
   </div>
 
   <div><button (click)=pedidos() mat-raised-button>Ver Pedidos</button></div>
 </div>
-
-<!-- <a routerLink="/user/perfil/{{user.password}}"></a>
-        {{user | json}} -->

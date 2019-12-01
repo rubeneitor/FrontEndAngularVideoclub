@@ -20,19 +20,7 @@
         <p class="propiedadesPelicula">Fecha de estreno:</p>
         <p>{{movie.release_date}}</p>
     </div>
-
-
-    <!-- <h1>Peliculas Relacionadas</h1>
-    <div class="movie" *ngFor="let pelicula of peliculas">
-        <h2>{{pelicula.title}}</h2>
-        <img src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" alt="poster">
-
-    </div> -->
-
     <div [style.display]="pedidoService.btnAlquilarNone ? 'none':'block'">
         <button (click)=alquilar() mat-raised-button>Alquilar</button>
     </div>
 </div>
-<!-- <div [style.diplay] = "formPedidoNone ? 'none' : 'block'">
-    <app-alguiler-pelicula></app-alguiler-pelicula>
-</div> -->
