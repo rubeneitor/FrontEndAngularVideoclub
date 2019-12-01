@@ -1,27 +1,28 @@
-# AngularPruebasComponents
+# Netflix Old Ruben Viosquez Beades
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+Este proyecto es un proyecto sobre alquiler de peliculas del antiguo netflix. A continuación explicare los pasos para poder probar y ejecutar a aplicacion y probarla.
 
-## Development server
+## Descargar repositorio
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Lo primero que hay que hacer es decargar el repositorio y abrirlo con un editor de codigo, por ejempo Visual Studio Code.
 
-## Code scaffolding
+## Ejecutar la aplicacion
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para ejecutar la aplicacion. Hay que usar tambien el repositio de BackEnd, a que esta puesto para que desde el proyecto raiz donde se deberia de encontrar los dos, con solo ejecutar el comando: npm start, se ejectarian los dos a la vez, se lanzarian los dos puertos, 3000 para el back y 4200 para en front.
 
-## Build
+## Pasos para poder ver los datos
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1.- Desde robo crear una base de datos con el mimso que la aplicacion, e ir creado colecciones segun se vaya necesitando y con los esquemas de los modelos que hemos creado en el back.
 
-## Running unit tests
+2.- Se puede probar los endpoints desde el postman para ver si realmente lo esta leyendo de la base de datos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3.- Una vez creada las colecciones en la base de datos de mongoDB (robo), y añadido algunos datos respectando las restrigciones de la aplicacion, ya podemos probar el front navegando por la aplicacion y probandola.
 
-## Running end-to-end tests
+## Crear Usuario, pedido, ..., desde el front
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Para probar el la creacion de datos desde el front. Podemos proceder a registrar un usuario para despues acceder a su perfil.
+Tambien se puede intentar crear un pedido, pero para ello, primero hay que iniciar sesion con el usuario registrado ya que si no se inicia la sesion, los botones para filtrar peliculas, y en este caso alguilar una de ellas, no estaria visible.
 
-## Further help
+Una vez estamos iniciados, vamos a una pelicula e intentamos realizar un pedido
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Una vez realizado el pedido, volvemos al perfil, al apartado ver pedidos, y ahi apareceran los pedidos realizados por ese Usuario.
