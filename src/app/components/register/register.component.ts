@@ -26,7 +26,7 @@ export class RegisterComponent {
   ngOnInit() {
 
   }
-
+  //boton para registrar un nuevo usuario 
   registrar() {
     this.userService.register(this.user)
       .subscribe(res => this.res = res)

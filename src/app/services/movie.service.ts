@@ -8,32 +8,30 @@ import { Movie } from '../models/movie.model';
 })
 export class MovieService {
   
-  apiKey = '210d6a5dd3f16419ce349c9f1b200d6d';
-  apiUrl = 'https://api.themoviedb.org/3/'
+
   isNoneFiltro = true;
   genero='';
   titulo='';
   peliculas:Array<Movie>=[];
- 
 
-  //Toda la url seria: https://api.themoviedb.org/3/discover/movie?api_key=210d6a5dd3f16419ce349c9f1b200d6d
   constructor(private httpClient: HttpClient) { }
 
+  //endopoint de todas las peliculas
   getDiscoverMovie():Observable<object>{
    return this.httpClient.get('http://localhost:3000/pelicula');
   }
 
-  getMoviesByCatergory(category:string):Observable<object>{
-    return this.httpClient.get(`${this.apiUrl}movie/${category}?api_key=${this.apiKey}&language=es-ES`);
-  }
+  //endpoint de las peliculas por genero
   getPeliculasGenero(nombre:string):Observable<object>{
     return this.httpClient.get(`http://localhost:3000/peliculas/generos/name/${nombre}`)
   }
 
+  //endpoint de las peliculas por titulo
   getPeliculaTitulo(titulo:string):Observable<Object>{
     return this.httpClient.get(`http://localhost:3000/pelicula/title/${titulo}`)
   }
 
+  //endpoint de la pelicula por id
   getMovieById(id:string){
     return this.httpClient.get(`http://localhost:3000/pelicula/id/${id}`);
   }

@@ -39,6 +39,7 @@ export class PedidosUsuarioComponent implements OnInit {
 
   constructor(private pedidoService: PedidoService) { }
 
+  //mostrammos los pedidos del usuario logueado
   ngOnInit() {
 
     this.user = JSON.parse(localStorage.getItem('user'))

@@ -42,6 +42,7 @@ export class AlguilerPeliculaComponent implements OnInit {
 
   }
 
+  //boton para añadir un pedido de un alquiler
   alquilerPedido() {
     this.pedidoService.hacerPedido(this.pedido)
       .subscribe(res => this.res = res)

@@ -31,6 +31,7 @@ export class MovieDetailComponent implements OnInit {
     private router: Router
   ) { }
 
+  //al cargarse el componente se cargan los detalles de cada pelicula al que se clickea
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const id = params.get('id')
@@ -41,6 +42,7 @@ export class MovieDetailComponent implements OnInit {
     })
   }
 
+  //boton de alquilar para acceder al formulario de rellenar el pedido
   alquilar() {
     this.router.navigateByUrl('/pedido');
   }

@@ -16,6 +16,7 @@ export class MovieListComponent implements OnInit {
 
   constructor(private movieService:MovieService) { }
 
+  //al cargarse el componente, se cargan todas las peliculas
   ngOnInit() {
     this.movieService.getDiscoverMovie()
     .subscribe(

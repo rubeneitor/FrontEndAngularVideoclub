@@ -20,7 +20,7 @@ import { AlguilerPeliculaComponent } from './components/alguiler-pelicula/alguil
 import { PedidosUsuarioComponent } from './components/pedidos-usuario/pedidos-usuario.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-
+//Aqui estan todos los componentes que he instalado
 @NgModule({
   declarations: [
     AppComponent,

@@ -27,6 +27,7 @@ export class LoginComponent  {
     private pedidoService: PedidoService,
     private router:Router) { }
 
+    //boton login para loguearse un usuario
   loguear(){
       this.userService.login(this.user)
       .subscribe(res=>{

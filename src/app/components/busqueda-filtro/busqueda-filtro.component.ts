@@ -17,6 +17,7 @@ export class BusquedaFiltroComponent implements OnInit {
 
   }
 
+  //boton para filtrar las peliculas por genero 
   buscarGenero() {
     this.movieService.getPeliculasGenero(this.genero)
       .subscribe(res =>
@@ -26,6 +27,7 @@ export class BusquedaFiltroComponent implements OnInit {
     this.titulo = '';
 
   }
+  //boton para filtrar las peliculas por titulo
   buscarTitulo() {
     this.movieService.getPeliculaTitulo(this.titulo)
       .subscribe(res => this.peliculas = Object.values(res),
