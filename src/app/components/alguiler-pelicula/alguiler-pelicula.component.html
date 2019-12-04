@@ -1,7 +1,7 @@
 <form (submit)="alquilerPedido()" #form="ngForm" class="formAlquiler">
 
     <h1 class='titulo'><span>Realizar pedido para:</span>
-        <span style="color: red">{{user.username}} - {{user.id}}</span>
+        <span style="color: red">{{user.username}} - {{user.id}} - {{pedido.idUsuario}}</span>
     </h1>
 
     <mat-form-field>
@@ -21,7 +21,7 @@
     <div></div>
 
     <mat-form-field>
-        <input matInput name="TituloPelicula" #idUsuario [(ngModel)]="pedido.tituloPelicula" placeholder="Pelicula">
+        <input matInput name="TituloPelicula" #title [(ngModel)]="movie.title" placeholder="Pelicula" value="{{movie.title}}" disabled>
     </mat-form-field>
 
     <div></div>

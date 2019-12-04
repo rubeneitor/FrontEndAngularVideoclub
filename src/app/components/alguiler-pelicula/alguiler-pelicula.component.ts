@@ -32,13 +32,40 @@ export class AlguilerPeliculaComponent implements OnInit {
     direccion: '',
     telefono: null
   }
-  res:object;
 
-  constructor(private pedidoService: PedidoService) { }
+  movie: Movie = {
+    popularity: null,
+    vote_count: null,
+    video: false,
+    poster_path: '',
+    id: null,
+    adult: false,
+    backdrop_path:'',
+    original_language: '',
+    original_title: '',
+    genre_ids: null,
+    title: '',
+    vote_average: null,
+    overview: '',
+    release_date: ''
+  }
+ 
+  peliculas:Array<Movie>=[];
+res:object;
+
+  constructor(private pedidoService: PedidoService,
+    private movieService: MovieService) { }
 
   ngOnInit() {
-    this.user = JSON.parse(localStorage.getItem('user'))
-    this.pedido.idUsuario = this.user.id
+    this.movie = this.movieService.getMovie();
+    this.pedido.tituloPelicula = this.movie.title
+   
+    // this.movie = JSON.parse(localStorage.getItem('movie'));
+    // this.pedido.tituloPelicula = this.movie.title;
+    this.user = JSON.parse(localStorage.getItem('user'));
+    this.pedido.idUsuario = this.user.id;
+
+    
 
   }
 

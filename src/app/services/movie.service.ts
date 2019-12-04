@@ -8,6 +8,7 @@ import { Movie } from '../models/movie.model';
 })
 export class MovieService {
   
+  currentMovie:Movie;
 
   isNoneFiltro = true;
   genero='';
@@ -34,6 +35,14 @@ export class MovieService {
   //endpoint de la pelicula por id
   getMovieById(id:string){
     return this.httpClient.get(`http://localhost:3000/pelicula/id/${id}`);
+  }
+
+  getMovie(): Movie{
+    return this.currentMovie;
+  }
+
+  setMovie(movie:Movie){
+    this.currentMovie = movie
   }
 
  

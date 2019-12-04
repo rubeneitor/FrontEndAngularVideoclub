@@ -1,9 +1,9 @@
 <div class="movies" [style.display]="movieService.homeIsNone ? 'none':'grid'">
-    <div class="movie" *ngFor="let pelicula of peliculas">
-        <a routerLink="/pelicula/{{pelicula.id}}">
+    <div class="movie" *ngFor="let pelicula of peliculas" (click) ="callDetalle(pelicula)">
+        <!-- <a routerLink="/pelicula/{{pelicula.id}}" > -->
             <h2>{{pelicula.title}}</h2>
             <img src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" alt="poster">
-        </a>
+        <!-- </a> -->
 
     </div>
 

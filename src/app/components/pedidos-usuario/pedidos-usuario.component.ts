@@ -41,18 +41,19 @@ export class PedidosUsuarioComponent implements OnInit {
 
   //mostrammos los pedidos del usuario logueado
   ngOnInit() {
-
     this.user = JSON.parse(localStorage.getItem('user'))
     this.pedidoService.buscarPedidosUsuario(this.user.id)
       .subscribe(
         res => {
           this.pedidos = Object.values(res)
+          
         
       },
         err => {
           console.log("ERR ", err)
         }
       )
+      
   }
 
 }

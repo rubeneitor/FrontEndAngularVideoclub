@@ -1,4 +1,4 @@
-<form (submit)="loguear()" #form="ngForm" class="formLogin">
+<div class="containerLogin"><form (submit)="loguear()" #form="ngForm" class="formLogin">
 
     <mat-form-field class="example-full-width">
         <input matInput placeholder="Username" #username [(ngModel)]="user.username" name="Username">
@@ -18,4 +18,4 @@
 </form>
 
 <br>
-{{res?.message}}
+{{res?.message}}</div>

@@ -1,27 +1,29 @@
-<div class="contenedorFiltro">
-    <mat-form-field class="example-full-width">
-        <input matInput [(ngModel)]="genero" type="text" placeholder="Introduce un genero">
+<div>
+    <div class="contenedorFiltro">
+        <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="genero" type="text" placeholder="Introduce un genero">
 
-    </mat-form-field>
-    <button (click)="buscarGenero()" mat-raised-button>Buscar Peliculas por Genero</button>
-
-</div>
-
-<div class="contenedorFiltro">
-    <mat-form-field class="example-full-width">
-        <input matInput [(ngModel)]="titulo" type="text" placeholder="Introduce un titulo">
-
-    </mat-form-field>
-    <button (click)="buscarTitulo()" mat-raised-button>Buscar Peliculas por Titulo</button>
-</div>
-
-<div class="moviesFiltro">
-    <div class="movie" *ngFor="let pelicula of peliculas">
-        <a routerLink="/pelicula/{{pelicula.id}}">
-            <h2>{{pelicula.title}}</h2>
-            <img src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" alt="poster">
-        </a>
+        </mat-form-field>
+        <button (click)="buscarGenero()" mat-raised-button>Buscar Peliculas por Genero</button>
 
     </div>
 
+    <div class="contenedorFiltro">
+        <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="titulo" type="text" placeholder="Introduce un titulo">
+
+        </mat-form-field>
+        <button (click)="buscarTitulo()" mat-raised-button>Buscar Peliculas por Titulo</button>
+    </div>
+
+    <div class="moviesFiltro">
+        <div class="movie" *ngFor="let pelicula of peliculas">
+            <a routerLink="/pelicula/{{pelicula.id}}">
+                <h2>{{pelicula.title}}</h2>
+                <img src="https://image.tmdb.org/t/p/w200/{{pelicula.poster_path}}" alt="poster">
+            </a>
+
+        </div>
+
+    </div>
 </div>
